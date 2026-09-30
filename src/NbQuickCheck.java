@@ -14,7 +14,13 @@ public class NbQuickCheck {
     if(!tree.containsKey(root)) {
       return;
     }
+    System.out.println(root); // prints out the root first
+
+    for (int child : tree.get(root)) { // loops through each child of that current
+      preOrder(tree, child);
+    } 
   }
+
 
   /**
    * Returns the minimum value in the tree.
